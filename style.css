@@ -1,7 +1,7 @@
 
 
 body {
-    background-color: #f0f0f0;
+    background: #fff
     padding-top: 20px;
 }
 
@@ -35,4 +35,12 @@ table {
 
 .div-card-content {
     height: 281px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.nav-wrapper {
+    background: linear-gradient(94deg, rgba(5, 75, 140, 1) 0%, rgb(86, 182, 227) -1%, rgba(5, 75, 140, 1) 70%);
 }
