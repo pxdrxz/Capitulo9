@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão Financeira - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper teal lighten-2">
+            <div class="container">
+                <a href="#" class="brand-logo">Gerencie suas finanças!</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#clientes">Clientes</a></li>
+                    <li><a href="#cobrancas">Cobranças</a></li>
+                    <li><a href="#relatorios">Relatórios</a></li>
+                    <li><a href="#investimentos">Investimentos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3 class="center-align">Dashboard de Gestão Financeira</h3>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#saldo">Saldo</a></li>
+                    <li class="tab col s3"><a href="#cobrancas">Cobranças</a></li>
+                    <li class="tab col s3"><a href="#investimentos">Investimentos</a></li>
+                    <li class="tab col s3"><a href="#relatorios">Relatórios</a></li>
+                </ul>
+            </div>
+            <div id="saldo" class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Resumo Financeiro</span>
+                        <p>Saldo atual: R$ 150.000,00</p>
+                        <p>Receitas do mês: R$ 50.000,00</p>
+                        <p>Despesas do mês: R$ 25.000,00</p>
+                    </div>
+                </div>
+            </div>
+            <div id="cobrancas" class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Cobranças Pendentes</span>
+                        <table class="striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Cliente</th>
+                                    <th>Descrição</th>
+                                    <th>Vencimento</th>
+                                    <th>Valor</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Empresa 1</td>
+                                    <td>Cobrança de Serviços de Consultoria</td>
+                                    <td>30/06/2024</td>
+                                    <td>R$ 1.500,00</td>
+                                    <td><span class="badge green lighten-1">Pendente</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Cliente A</td>
+                                    <td>Fatura Mensal</td>
+                                    <td>15/07/2024</td>
+                                    <td>R$ 800,00</td>
+                                    <td><span class="badge yellow lighten-1">Em andamento</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Empresa 2</td>
+                                    <td>Parcela 2/3 do Contrato</td>
+                                    <td>10/07/2024</td>
+                                    <td>R$ 2.000,00</td>
+                                    <td><span class="badge red lighten-1">Atrasado</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="investimentos" class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Investimentos</span>
+                        <p>Total de investimentos: R$ 500.000,00</p>
+                        <p>Rentabilidade mensal: 2.5%</p>
+                        <p>Principais fundos: Fundo A, Fundo B</p>
+                    </div>
+                </div>
+            </div>
+            <div id="relatorios" class="col s12">
+                <div class="card">
+                    <div class="card-content" style="height: 281px">
+                        <span class="card-title">Relatórios Financeiros</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula tortor vitae fringilla
+                            tristique. Maecenas quis interdum metus. Cras euismod, lorem eget dignissim elementum, urna
+                            mauris mattis neque, in feugiat est libero a ipsum. Morbi dapibus auctor convallis.</p>
+                        <p>Phasellus rutrum nisi in sem mattis, et cursus orci vestibulum. Integer vel tortor ac purus
+                            eleifend auctor id ac ligula. Etiam euismod velit sit amet tellus bibendum, nec volutpat
+                            turpis dignissim. Proin non neque nec lectus maximus lacinia. Mauris ut lacus nunc.</p>
+                        <p>Nulla facilisi. Donec sodales, lorem et pharetra lobortis, lectus augue fermentum eros, nec
+                            dapibus tellus ipsum ut mi. Pellentesque habitant morbi tristique senectus et netus et
+                            malesuada fames ac turpis egestas.</p>
+                        <canvas id="graficoFinanceiro"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div id="clientes" class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Lista de Clientes</span>
+                        <ul class="collection">
+                            <li class="collection-item">Empresa ABC</li>
+                            <li class="collection-item">Cliente XYZ</li>
+                            <li class="collection-item">Empresa 123</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
